@@ -86,7 +86,7 @@ def upload3_file():
 
 
 @app.route('/AFD', methods=['GET', 'POST'])
-def AFD():
+def AFDf():
     AFD.main()
 
 @app.route('/tablet', methods=['GET', 'POST'])
