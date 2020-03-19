@@ -102,5 +102,5 @@ def download():
 
 
 @app.route('/pdf', methods=['GET', 'POST'])
-def download():
+def downloadpdf():
     pass

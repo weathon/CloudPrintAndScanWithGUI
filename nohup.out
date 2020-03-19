@@ -1,0 +1,16 @@
+ * Serving Flask app "main.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Usage: python -m flask run [OPTIONS]
+
+Error: While importing "main", an ImportError was raised:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/flask/cli.py", line 240, in locate_app
+    __import__(module_name)
+  File "/home/dietpi/CloudPrintAndScanWithGUI/main.py", line 9, in <module>
+    import AFD,simple
+ModuleNotFoundError: No module named 'AFD'
+
