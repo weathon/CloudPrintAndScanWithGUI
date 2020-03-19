@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Printer and Scaner</title>
 </head>
+
 <body>
     <h1 style="color: red;">Toner is low.</h1>
-    <p>Print:</p>
-    <input type=file><input>
+    <p>单面打印：</p>
+    <!-- <input type=file><input>
     <button>Double Print</button>
-    <button>Single Print</button>
+    <button>Single Print</button> -->
+    <form action="/print1" method="post" enctype="multipart/form-data">
+        <input type="file" class="file" name="file" />
+        <button type="submit" class="but1">Send it!</button>
+    </form>
+
+    <p>双面打印(长边翻页)：</p>
+    <!-- <input type=file><input>
+    <button>Double Print</button>
+    <button>Single Print</button> -->
+    <form action="/print2" method="post" enctype="multipart/form-data">
+        <input type="file" class="file" name="file" />
+        <button type="submit" class="but1">Send it!</button>
+    </form>
+
+    <p>双面打印(短边翻页)：</p>
+    <!-- <input type=file><input>
+    <button>Double Print</button>
+    <button>Single Print</button> -->
+    <form action="/print3" method="post" enctype="multipart/form-data">
+        <input type="file" class="file" name="file" />
+        <button type="submit" class="but1">Send it!</button>
+    </form>
 
     <p>Scan:</p>
     <button>Feeder</button>
     <button>Tablet</button>
 </body>
+
 </html>
