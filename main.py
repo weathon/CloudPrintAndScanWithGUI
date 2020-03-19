@@ -1,11 +1,12 @@
 from flask import Flask
 from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
+from flask import send_file, send_from_directory
 import os
 
 app = Flask(__name__)
 
-
+import AFD,simple
 
 
 
@@ -82,3 +83,24 @@ def upload3_file():
             os.system("lp -o sides=two-sided-short-edge "+filename)
             os.remove(filename)
     return "<script>alert('完成');window.location='/'</script>"
+
+
+@app.route('/AFD', methods=['GET', 'POST'])
+def AFD():
+    AFD.main()
+
+@app.route('/tablet', methods=['GET', 'POST'])
+def tablet():
+    simple.main()
+
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+    os.system("zip -q -r -0 output.zip /"+"output")#zuse
+    os.system("rm -rf output;mkdir output") #不要写错/
+    return app.send_static_file("output.zip")  
+
+
+
+@app.route('/pdf', methods=['GET', 'POST'])
+def download():
+    pass

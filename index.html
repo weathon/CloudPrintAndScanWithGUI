@@ -37,8 +37,19 @@
     </form>
 
     <p>Scan:</p>
-    <button>Feeder</button>
-    <button>Tablet</button>
+    <form action="/AFD" method="post" enctype="multipart/form-data">
+        <button type="submit">自动送纸</button>
+    </form>
+    <form action="/tablet" method="post" enctype="multipart/form-data">
+        <button type="submit">平板</button>
+    </form>
+    <!-- <form action="/pdf" method="post" enctype="multipart/form-data">
+        <button type="submit">pdf下载</button>
+    </form> -->
+    <form action="/download" method="post" enctype="multipart/form-data">
+        <button type="submit">打包下载</button>
+        <!-- 不能每一次扫描都清空，应该下载完 -->
+    </form>
 </body>
 
 </html>
