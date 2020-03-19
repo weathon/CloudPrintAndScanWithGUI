@@ -22,7 +22,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1].lower() in {"pdf","txt"}
 
 @app.route('/print1', methods=['GET', 'POST'])
-def upload_file():
+def upload1_file():
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
@@ -43,7 +43,7 @@ def upload_file():
 
 
 @app.route('/print2', methods=['GET', 'POST'])
-def upload_file():
+def upload2_file():
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
@@ -64,7 +64,7 @@ def upload_file():
 
 
 @app.route('/print3', methods=['GET', 'POST'])
-def upload_file():
+def upload3_file():
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
